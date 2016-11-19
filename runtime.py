@@ -3,15 +3,16 @@ def string_compare(s1, s2):
 
     Put runtime here:
     -----------------
-    [               ]
+    [       O(n)        ]
 
 
     """
 
     if len(s1) != len(s2):
         return False
-
+    # O(n)    
     for i in range(len(s1)):
+        # O(1)
         if s1[i] != s2[i]:
             return False
 
@@ -23,10 +24,10 @@ def has_exotic_animals(animals):
 
     Put runtime here:
     -----------------
-    [               ]
+    [       O(n)        ]
 
     """
-
+    # O(n) and O(n)
     if "hippo" in animals or "platpypus" in animals:
         return True
     else:
@@ -38,7 +39,7 @@ def sum_zero_1(numbers):
 
     Put runtime here:
     -----------------
-    [               ]
+    [      O(n)        ]
 
     """
 
@@ -48,7 +49,9 @@ def sum_zero_1(numbers):
     # we'll learn exactly why later
     s = set(numbers)
 
+    # O(n)
     for x in s:
+        # O(1) lookup in set
         if -x in s:
             result.append([-x, x])
 
@@ -60,13 +63,15 @@ def sum_zero_2(numbers):
 
     Put runtime here:
     -----------------
-    [               ]
+    [       O(n^2)        ]
 
     """
 
     result = []
 
+
     for x in numbers:
+        # nested for loop
         for y in numbers:
             if x == -y:
                 result.append((x, y))
@@ -80,14 +85,16 @@ def sum_zero_3(numbers):
 
     Put runtime here:
     -----------------
-    [               ]
+    [        O(n^3)       ]
 
     """
 
     result = []
 
     for x in numbers:
+        # nested for loop
         for y in numbers:
+            # another nested for loop, cycling through result list
             if x == -y and (y, x) not in result:
                 result.append((x, y))
     return result
