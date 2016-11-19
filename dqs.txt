@@ -1,0 +1,56 @@
+DISCUSSION QUESTIONS
+
+####################################################################################################
+
+Runtime
+
+1
+If the workload is the number of tasks required to complete a job, and our job is figuring out whether the box of animal crackers contains an elephant, then the number of animal crackers in the box determines the workload. Every time one more animal cracker is added to the box, we have one more task to complete to reach the answer (assuming the most pessimistic case, which is that there are no elephants so we have to go through all the crackers, or there is one elephant but it happens to be the last cracker we pull from the box). The task is just pulling a cracker out of the box and seeing if it's an elephant.
+
+2
+Ordered fastest to slowest:
+O(1) constant
+O(log n) logarithmic
+O(n) linear
+O(n log n) logarithmic
+O(n^2) quadratic
+O(2^n) exponential
+
+####################################################################################################
+
+Stacks and Queues
+
+1
+a) stack - last pallet loaded onto the truck will be the first one taken off
+b) queue - first bottle cap onto assembly line will be first cap received by bottle cappers
+c) stack
+
+2
+more queues:
+digital music playlists, since people assume they work in forward moving linear time. pinballs; first ball loaded into queue is first one shot out. an escalator with someone standing in the way so that no one can pass on the left.
+
+3
+more stacks:
+getting into and out of a packed elevator (sort of...stack order would actually disintegrate pretty quickly..okay, this is a terrible example). a function callstack. pringles. tennis ball containers.
+
+####################################################################################################
+
+Linked Lists
+
+1
+The nodes are apple, berry, and cherry. The apple node contains the data apple (the box that says "Apple"), and it also contains the pointer to the next node in the list, berry. That pointer is represented by the box that says 'next' immediately to the right of the "Apple" box, and the arrow stemming off the right of the 'next' box. The berry and cherry nodes contain the same type of information as the apple node--their own data, "Berry" and "Cherry", and also their own pointers to the next node in the list. For berry that pointer is the 'next' box and arrow pointing toward the cherry node, and for cherry that pointer is the 'next' box pointing toward 'None.' 
+The head is the first node in the list, so the apple node. There is also a head attribute of the linked list object, and it points to the first item in the list, the apple node. That head attribute is the box that says head, along with the arrow pointing down toward the apple node. However, this is just a reference to the head, not the head itself. The tail is the cherry node, since it is the last node in the list (which we know since its next attribute points to None instead of a node). There is no pointer in the linked list instance to the tail node.
+
+2
+In a doubly linked list, each node has a pointer to the node that precedes it and a pointer to the node that follows is. In a singly linked list, each node only has a pointer to the node that follows it.
+
+3
+It is faster to append to a linked list if we keep track of the tail as an attribute because then we can go straight to the tail and take care of appending the new node and updating the tail pointer, as opposed to having to traverse the entire linked list to find the tail, append the new node, and update the tail pointer. The latter is what we would have to do if the linked list object only had a head attribute that points to the head of the list, since each node of the list only knows its own data and a reference to the node that follows it. It doesn't know about the rest of the nodes in the list.
+
+####################################################################################################
+
+Trees
+
+1
+
+
