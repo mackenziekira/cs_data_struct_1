@@ -52,5 +52,11 @@ It is faster to append to a linked list if we keep track of the tail as an attri
 Trees
 
 1
+food > italian > indian > mexican > lasagna > pizza > tikka masala > saag > BURRITO
 
+2
+food > mexican > enchiladas > tacos > burrito > indian > saag > tikka masala > italian > pizza > sicilian > new york-style > CHICAGO-STYLE
+
+3
+A binary search tree is different from other trees because it doesn't maintain any hierarchical data, it just optimizes for quick searching based on a rule for arrangement that you set. Also, each node in a binary search tree has a left and right child (or else it has a single child or no children), whereas other trees have an unlimited number of children per node.
 
