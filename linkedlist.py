@@ -99,6 +99,16 @@ class LinkedList(object):
 
         node = self.head
 
+        # if idx is negative, convert idx to the appropriate positive idx value so that we can 
+        # use same for loop below, regardless of negative or positive input idx
+        if idx < 0:
+            length = self.get_len()
+            # return none if idx is out of range
+            if abs(idx) > length:
+                return None
+            # otherwise convert idx to its corresponding positive value
+            idx = length - abs(idx)
+
         for i in xrange(idx):
             if not node:
                 return None
@@ -106,6 +116,20 @@ class LinkedList(object):
                 node = node.next        
 
         return node
+
+    # helper function for case of negative idx in get_node_by_idx
+    def get_len(self):
+        """return len of list"""
+
+        counter = 0
+
+        node = self.head
+
+        while node:
+            counter += 1
+            node = node.next
+
+        return counter
 
 if __name__ == "__main__":
     import doctest
